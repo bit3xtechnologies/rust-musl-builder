@@ -122,7 +122,7 @@ RUN echo "Building libpq" && \
 # Install a `git credentials` helper for using GH_USER and GH_TOKEN to access
 # private repositories if desired. We make sure this is configured for root,
 # here, and for the `rust` user below.
-ADD git-credential-ghtoken /usr/local/bin/ghtoken
+ADD git-credential-ghtoken /usr/local/bin/git-credential-ghtoken
 RUN git config --global credential.https://github.com.helper ghtoken
 
 # Set up our path with all our binary directories, including those for the
